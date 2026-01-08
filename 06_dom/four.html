@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="language">
+      <li>javascipt</li>
+    </ul>
+  </body>
+  <script>
+    function addLanguage(languag) {
+      const li = document.createElement("li");
+
+      li.innerHTML = `${languag}`;
+      document.querySelector(".language").appendChild(li);
+    }
+
+    function addOptiLanguage(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(li);
+    }
+    addLanguage("java");
+    addLanguage("php");
+    addLanguage("jquery");
+    addOptiLanguage("Python");
+
+    //Edit
+
+    const secondLi = document.querySelector("li:nth-child(2)");
+    const newLi = document.createElement("li");
+    newLi.innerText = "node";
+    secondLi.replaceWith(newLi);
+
+    //Edit
+
+    const firstLi = document.querySelector("li:first-child");
+    firstLi.outerHTML = "<li>TypeScipt</li>";
+
+    //remove
+    const lastLi = document.querySelector("li:last-child");
+    lastLi.remove();
+
+    //remove All List
+    // const allLi = document.querySelectorAll('li');
+    //     allLi.forEach((list) => list.remove())
+
+
+</script>
+</html>
