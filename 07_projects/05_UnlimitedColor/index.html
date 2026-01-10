@@ -28,13 +28,13 @@
 
     let intervalId;
     start.addEventListener("click", () => {
-          if (!intervalId) {
+      if (!intervalId) {
         intervalId = setInterval(() => {
           // console.log(randomColor());
           body.style.backgroundColor = randomColor();
         }, 1000);
-    }
-      });
+      }
+    });
 
     stop.addEventListener("click", () => {
       clearInterval(intervalId);

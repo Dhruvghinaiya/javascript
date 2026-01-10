@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Detector</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f6f8;
+      }
+
+      #insert {
+        background: #ffffff;
+        padding: 30px 40px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        min-width: 350px;
+      }
+
+      h2 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+
+      th {
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        font-size: 14px;
+      }
+
+      tr:nth-child(even) td {
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="insert">
+      <h2 class="key">Press any key ⌨️</h2>
+    </div>
+
+    <script>
+      const insert = document.querySelector("#insert");
+
+      window.addEventListener("keydown", (e) => {
+        insert.innerHTML = `
+          <h2>Key Pressed</h2>
+          <table>
+            <tr>
+              <th>Key</th>
+              <th>Key Code</th>
+              <th>Code</th>
+            </tr>
+            <tr>
+              <td>${e.key === " " ? "Space" : e.key}</td>
+              <td>${e.keyCode}</td>
+              <td>${e.code}</td>
+            </tr>
+          </table>
+        `;
+      });
+    </script>
+  </body>
+</html>
