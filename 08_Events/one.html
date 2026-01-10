@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Amazing Image</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="first"
+            height="200px"
+            src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            height="200px"
+            src="https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            height="200px"
+            src="https://images.pexels.com/photos/22807062/pexels-photo-22807062.jpeg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            height="200px"
+            src="https://images.pexels.com/photos/31036180/pexels-photo-31036180.jpeg"
+            alt=""
+          />
+        </li>
+        <li><a href="https://google.com" id="google">Google</a></li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // document.getElementById("first").onclick =  () =>  {
+    //     alert('hello dhruv')
+    // };
+
+    // document.querySelector("#first").addEventListener("click", (e) => {
+    //   //   alert("Hello Dhruv");
+    //   console.log(e);
+    // });
+
+    // document.querySelector("#images").addEventListener(
+    //   "click",
+    //   (e) => {
+    //     console.log("clicked inside the ul");
+    //   },
+    //   true
+    // );
+
+    // document.querySelector("#first").addEventListener("click", (e) => {
+    //   console.log("owl clicked");
+    // },true);
+
+    //    document.querySelector("#images").addEventListener(
+    //   "click",
+    //   (e) => {
+    //     console.log("clicked inside the ul");
+    //   },
+
+    // );
+
+    // document.querySelector("#first").addEventListener("click", (e) => {
+    //   console.log("owl clicked");
+    //   e.stopPropagation()
+    // },);
+
+    // document.querySelector('#google').addEventListener('click',(e)=>{
+    //     console.log('google clicked');
+
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    // })
+
+    document.querySelector("#images").addEventListener("click", (e) => {
+      if (e.target.tagName === "IMG") {
+        // console.log(e.target.tagName);
+        e.target.parentNode.remove();
+      }
+    });
+  </script>
+</html>
