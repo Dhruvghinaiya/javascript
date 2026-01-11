@@ -13,16 +13,14 @@ console.log(userData.name);
 console.log(userData["city"]);
 userData.getUserDetail();
 
-
-function user(name,age,city){
-    this.name = name
-    this.age = age
-    this.city = city
-    return this
+function user(name, age, city) {
+  this.name = name;
+  this.age = age;
+  this.city = city;
+  return this;
 }
 
-
-const userOne = new user('dhruv',22,'amreli')
-const usertwo = new user('tushar',28,'amreli')
+const userOne = new user("dhruv", 22, "amreli");
+const usertwo = new user("tushar", 28, "amreli");
 console.log(userOne);
 console.log(usertwo);

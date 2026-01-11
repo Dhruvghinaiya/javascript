@@ -6,17 +6,11 @@ class User {
     this.password = password;
   }
 
-   encPassword  () {
+  encPassword() {
     return `${this.password}abc`;
   }
 
-
-   abc(){
-    
-  }
-
-  this.abc   = () =>{}
-
+  abc() {}
 }
 
 let obj = new User("dhruv", 23, "amreli", 1234);
